@@ -11,8 +11,8 @@ Point2D::Point2D()
 
 Point2D::Point2D(int x, int y)
 {
-	x = x;
-	y = x;
+	this->x = x;
+	this->y = y;
 }
 
 Point2D::~Point2D()
@@ -44,10 +44,9 @@ void ordenamientoCircular(std::forward_list<Point2D>& pointlist)
 	std::swap(*it, *pointlist.begin());
 
 	reference = *pointlist.begin();
-	//bool coso = *it < reference;
-	//std::cout << coso;
-	auto it1 = pointlist.begin()++;
+
 	// Ordenamos los puntos!
+	//pointlist.pop_front();
 	pointlist.sort();
 	//qsort((void *)&ptos[1], size - 1, sizeof(Point2D), compare);
 }
@@ -80,32 +79,9 @@ bool Point2D::operator==(const Point2D & point)
 		return false;
 }
 
-bool compare(const Point2D& point1, const Point2D& point2)
-{
-	Point2D v1(point1.getX() - reference.getX(), point1.getY() - reference.getY());
-	Point2D v2(point2.getX() - reference.getX(), point2.getY() - reference.getY());
-	int area2, d1, d2;
-
-	area2 = v1.getX() * v2.getY() - v1.getY() * v2.getX();
-
-	if (area2 > 0)
-		return true;
-	else if (area2 < 0)
-		return false;
-	else {
-		d1 = v1.getX() * v1.getX() + v1.getY() * v1.getY();
-		d2 = v2.getX() * v2.getX() + v2.getY() * v2.getY();
-
-		if (d1 < d2)
-			return true;
-		else
-			return false;
-	}
-}
-
 bool Point2D::operator<(const Point2D& point)
 {
-	Point2D v1(x - reference.getX(), y - reference.getY());
+	Point2D v1(this->x - reference.getX(), this->y - reference.getY());
 	Point2D v2(point.getX() - reference.getX(), point.getY() - reference.getY());
 	int area2, d1, d2;
 

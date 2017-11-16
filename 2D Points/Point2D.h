@@ -19,13 +19,7 @@ public:
 private:
 	int x, y;
 };
-bool compare(const Point2D&, const Point2D&);
 void ordenamientoCircular(std::forward_list<Point2D>&);
 std::forward_list<Point2D>::iterator findMin(std::forward_list<Point2D>&);
-
-//inline std::ostream& operator <<(std::ostream& os, Point2D& point) {
-//	os << point.getX() << " " << point.getY();
-//	return os;
-//}
 
 
