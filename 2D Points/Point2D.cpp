@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Point2D.h"
 
 Point2D reference;
@@ -36,8 +35,8 @@ void ordenamientoCircular(std::forward_list<Point2D>& pointlist)
 {
 	int min = 0, size = std::distance(pointlist.begin(), pointlist.end());
 
-	// Busco el punto con y mínima, si hay varios de ellos
-	// encuentro el punto con x mínima:
+	// Busco el punto con y mï¿½nima, si hay varios de ellos
+	// encuentro el punto con x mï¿½nima:
 	auto it = findMin(pointlist);
 
 	// Intercambio el punto[minimo] con punto[0]
@@ -71,7 +70,7 @@ void Point2D::setY(int y)
 	this->y = y;
 }
 
-bool Point2D::operator==(const Point2D & point)
+bool Point2D::operator==(const Point2D & point) const
 {
 	if (this->x == point.getX() && this->y == point.getY())
 		return true;
@@ -79,7 +78,7 @@ bool Point2D::operator==(const Point2D & point)
 		return false;
 }
 
-bool Point2D::operator<(const Point2D& point)
+bool Point2D::operator<(const Point2D& point) const
 {
 	Point2D v1(this->x - reference.getX(), this->y - reference.getY());
 	Point2D v2(point.getX() - reference.getX(), point.getY() - reference.getY());

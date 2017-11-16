@@ -14,8 +14,8 @@ public:
 	int getY() const;
 	void setX(int);
 	void setY(int);
-	bool operator == (const Point2D&);
-	bool operator<(const Point2D& point);
+	bool operator == (const Point2D&) const;
+	bool operator<(const Point2D& point) const;
 private:
 	int x, y;
 };
