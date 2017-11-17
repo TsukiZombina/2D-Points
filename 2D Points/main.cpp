@@ -6,13 +6,22 @@
 
 std::forward_list<Point2D>& readflist(std::forward_list<Point2D>& data, const char* filename);
 
-int main()
+int main(int argc, char* argv[])
 {
+	const char* filename = argv[1];
+	if(argc != 2)
+	{
+		std::cerr << "Args: Input file" << std::endl;
+		return 1;
+	}
 	std::forward_list<Point2D> fl;
-	readflist(fl, "points.txt");
-	ordenamientoCircular(fl);
-	for (auto& puntito : fl) {
-		std::cout << puntito.getX() << " " << puntito.getY() << std::endl;
+	readflist(fl, filename);
+	if(!fl.empty())
+	{
+		ordenamientoCircular(fl);
+		for (auto& puntito : fl) {
+			std::cout << puntito.getX() << " " << puntito.getY() << std::endl;
+		}
 	}
 	return 0;
 }
