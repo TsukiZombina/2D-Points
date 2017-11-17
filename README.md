@@ -2,8 +2,8 @@
 Circular counterclock.wise sorting of points with std::forward_list
 
 ## Description
-- Entrada: This program recieves a set of coodinates of type integer through text file.
-- Salida: Print in the standard output the counter-clockwise list of points.
+- Input: This program recieves a set of coodinates of type integer through text file.
+- Output: Print in the standard output the counter-clockwise list of points.
 
 ## Execution example
 ```markdown
