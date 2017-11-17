@@ -8,10 +8,8 @@ Point2D::Point2D()
 	y = 0;
 }
 
-Point2D::Point2D(int x, int y)
+Point2D::Point2D(int x, int y):x(x), y(y)
 {
-	this->x = x;
-	this->y = y;
 }
 
 Point2D::~Point2D()
