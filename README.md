@@ -1,5 +1,5 @@
 # 2D-Points
-Circular counterclock.wise sorting of points with std::forward_list
+Circular counter-clockwise sorting of points with std::forward_list
 
 ## Description
 - Input: This program recieves a set of coodinates of type integer through text file.
